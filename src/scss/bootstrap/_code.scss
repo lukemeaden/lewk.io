@@ -1,0 +1,25 @@
+pre{
+  background-color: $colour-grey-lighter;
+  border-radius: $border-radius-context;
+  border: 1px solid $colour-grey-light;
+  color: $colour-black;
+  font-family: monospace, monospace;
+  font-size: 1.3rem;
+  padding: ($grid-gutter-width / 2) $grid-gutter-width;
+
+  code{
+    .nt{
+      color: $colour-black-dark;
+    }
+    .na{
+      color: $colour-red;
+    }
+    .s{
+      color: $colour-green;
+    }
+  }
+}
+
+figure{
+  margin: 0;
+}

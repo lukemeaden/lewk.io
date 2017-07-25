@@ -1,0 +1,126 @@
+html{
+  font-size: $font-size-base;
+  line-height: $line-height;
+}
+
+body{
+  color: $colour-black;
+  font-size: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 300;
+  margin: 0;
+  padding-top: $grid-gutter-width / 4;
+  padding-bottom: $grid-gutter-width / 2;
+  small{
+    color: $colour-black-light;
+    font-size: 0.7em;
+  }
+}
+
+h1{
+  font-size: 4rem;
+}
+
+h2{
+  font-size: 3.2rem;
+}
+
+h3{
+  font-size: 2.6rem;
+}
+
+h3{
+  font-size: 2.4rem;
+}
+
+h4{
+  font-size: 2.1rem;
+}
+
+h5{
+  font-size: 1.8rem;
+}
+
+h6{
+  font-size: 1.6rem;
+}
+
+p{
+  margin: 0;
+  padding-bottom: $grid-gutter-width / 2;
+  &.lead{
+    font-size: 1.4em;
+  }
+}
+
+a{
+  color: $colour-alt;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+del{
+  color: $colour-grey
+}
+
+address{
+  font-style: normal;
+}
+
+blockquote{
+  background-color: $colour-grey-lightist;
+  border-left: 3px solid $colour-alt;
+  margin: 0;
+  padding: 1px $grid-gutter-width;
+  footer{
+    color: $colour-black-light;
+    margin-bottom: $grid-gutter-width / 2;
+    &:before{
+      content:'- '
+    }
+  }
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+.text-nowrap{
+  text-align: nowrap;
+}
+
+.text-lowercase{
+  text-transform: lowercase;
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
+
+.text-capitalize{
+  text-transform: capitalize;
+}
+
+.list-unstyled{
+  list-style: none;
+  padding-left: 0px;
+  li{
+
+  }
+}

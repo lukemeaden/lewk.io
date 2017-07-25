@@ -1,0 +1,19 @@
+.header{
+  background: #ffffff;
+  z-index: 1500;
+  &.header-fixed{
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    & + section{
+      padding-top: $grid-gutter-width * 1.5;
+    }
+  }
+
+  .brand{
+    display: inline-block;
+    padding: $grid-gutter-width / 2 $grid-gutter-width;
+  }
+
+}

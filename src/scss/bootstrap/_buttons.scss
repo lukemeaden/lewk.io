@@ -1,0 +1,74 @@
+.btn{
+  background-color: #ffffff;
+  border: 1px solid $colour-alt;
+  border-radius: $border-radius-context;
+  box-sizing: border-box;
+  color: $colour-alt;
+  display: inline-block;
+  padding: ($grid-gutter-width / 3) ($grid-gutter-width / 2);
+  text-align: center;
+  white-space: no-wrap;
+  &:active,
+  &.active{
+    border-color: $colour-alt-bright;
+    color: $colour-alt-bright;
+  }
+
+  &.btn-primary{
+    background-color: $colour-alt;
+    color: #ffffff;
+    &:active,
+    &.active{
+      background-color: $colour-alt-bright;
+    }
+  }
+  &.btn-success{
+    border: 1px solid $colour-green;
+    color: $colour-green;
+  }
+  &.btn-info{
+    border: 1px solid $colour-black-light;
+    color: $colour-black-light;
+  }
+  &.btn-warning{
+    border: 1px solid $colour-orange;
+    color: $colour-orange;
+  }
+  &.btn-danger{
+    border: 1px solid $colour-red;
+    color: $colour-red;
+  }
+  &.btn-link{
+    border: 0;
+    display: inline;
+    padding: 0;
+  }
+  &.btn-lg{
+    font-size: 2rem;
+    padding: $grid-gutter-width * .6 $grid-gutter-width;
+  }
+  &.btn-sm{
+    font-size: 1rem;
+    padding: $grid-gutter-width * .2 $grid-gutter-width * .4;
+  }
+  &.btn-xs{
+    border-radius: $border-radius-context / 2;
+    font-size: .9rem;
+    padding: $grid-gutter-width * .1 $grid-gutter-width * .2;
+  }
+  &.btn-block{
+    display: block;
+    width: 100%;
+  }
+  &:disabled,
+  &.disabled{
+    opacity: .4
+  }
+}
+
+button.btn,
+input[type=submit].btn,
+input[type=button].btn,
+input[type=reset].btn{
+  line-height: $line-height;
+}

@@ -3,6 +3,14 @@ import DataStore from 'flux/stores/DataStore.js';
 
 class Header extends React.Component {
 
+    componentDidMount() {
+        if (document.getElementsByClassName('header-fixed')[0]) {
+            const height = document.getElementsByClassName('header-fixed')[0].clientHeight;
+            const body = document.getElementsByTagName('body')[0];
+            body.style.paddingTop=height+"px";
+        }
+    }
+
     render() {
         let allPages = DataStore.getAllPages();
         allPages = _.sortBy(allPages, [function(page) { return page.menu_order; }]); // Sort pages by order
@@ -21,12 +29,7 @@ class Header extends React.Component {
                             if(page.slug != 'home'){
                                return(
                                    <li key={page.id}>
-                                        <Link
-                                            to={`/${page.slug}`}
-                                            style={{marginRight: '10px'}}
-                                        >
-                                            {page.title.rendered}
-                                        </Link>
+                                        <Link to={`/${page.slug}`}>{page.title.rendered}</Link>
                                     </li>
                                 )
                            }

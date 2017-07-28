@@ -1,0 +1,27 @@
+footer{
+  background-color: $colour-black;
+  color: #ffffff;
+  padding: $grid-gutter-width 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+
+  a{
+    color: #ffffff;
+  }
+
+  .nav{
+    li{
+      a{
+        color: #ffffff;
+        padding: $grid-gutter-width / 4 0;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      &:hover{
+        background-color: transparent;
+      }
+    }
+  }
+}

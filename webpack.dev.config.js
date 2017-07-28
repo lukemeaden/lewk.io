@@ -56,11 +56,23 @@ module.exports = {
 					plugins: ['transform-runtime'],
 					presets: ['es2015', 'stage-0', 'react'],
 				}
-			}
+			},
+			{
+          test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+					loader: 'file-loader?name==[name].[ext]&outputPath=./fonts/&publicPath=/'
+      },
+      {
+          test: /\.(scss|sass)$/i,
+          include: [
+              path.resolve(__dirname, './src/scss')
+          ],
+					loaders: ["css-loader","sass-loader"]
+      }
 		]
 	},
 	plugins: [
     new SassPlugin("src/scss/site.scss"),
+    new SassPlugin("src/scss/font-awesome.scss"),
 		new webpack.HotModuleReplacementPlugin(), // Hot reloading
 		new webpack.NoEmitOnErrorsPlugin(), // Webpack will let you know if there are any errors
 

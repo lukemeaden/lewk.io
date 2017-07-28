@@ -1,0 +1,36 @@
+.header{
+  .brand{
+    position: relative;
+    &:before{
+      content: '';
+      display: inline-block;
+      width: $grid-gutter-width + 10;
+    }
+    &:after{
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 20px solid #ffffff;
+      position: absolute;
+      left: $grid-gutter-width;
+    }
+  }
+}
+
+.home{
+  padding-top: 0px!important;
+  .home-intro{
+    background-color: $colour-alt;
+    padding: $grid-gutter-width * 3 0 $grid-gutter-width;
+    h1{
+      color: #ffffff;
+      font-size: 8rem;
+    }
+  }
+  .home-blog{
+    padding: $grid-gutter-width 0;
+  }
+}

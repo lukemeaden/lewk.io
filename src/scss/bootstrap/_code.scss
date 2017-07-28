@@ -6,6 +6,7 @@ pre{
   font-family: monospace, monospace;
   font-size: 1.3rem;
   padding: ($grid-gutter-width / 2) $grid-gutter-width;
+  position: relative;
 
   code{
     .nt{
@@ -16,6 +17,126 @@ pre{
     }
     .s{
       color: $colour-green;
+    }
+  }
+  &[rel=HTML]{
+    padding-top: $grid-gutter-width * 1.5;
+    &:before{
+      background-color: $pre-html;
+      color: white;
+      content: 'HTML';
+      display: block;
+      font-family: $font-default;
+      font-size: 1rem;
+      font-weight: 600;
+      position: absolute;
+      line-height: $grid-gutter-width;
+      padding: 0 $grid-gutter-width;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-shadow: 0px 1px 1px rgba(0,0,0,0.3)
+    }
+    &:after{
+      content: '';
+      display: block;
+      width:0;
+      height:0;
+      border-left: 10px solid transparent;
+      border-bottom: 10px solid $pre-html;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &[rel=CSS]{
+    padding-top: $grid-gutter-width * 1.5;
+    &:before{
+      background-color: $pre-css;
+      color: white;
+      content: 'CSS';
+      display: block;
+      font-family: $font-default;
+      font-size: 1rem;
+      font-weight: 600;
+      position: absolute;
+      line-height: $grid-gutter-width;
+      padding: 0 $grid-gutter-width;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-shadow: 0px 1px 1px rgba(0,0,0,0.3)
+    }
+    &:after{
+      content: '';
+      display: block;
+      width:0;
+      height:0;
+      border-left: 10px solid transparent;
+      border-bottom: 10px solid $pre-css;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &[rel=JS]{
+    padding-top: $grid-gutter-width * 1.5;
+    &:before{
+      background-color: $pre-js;
+      color: white;
+      content: 'CSS';
+      display: block;
+      font-family: $font-default;
+      font-size: 1rem;
+      font-weight: 600;
+      position: absolute;
+      line-height: $grid-gutter-width;
+      padding: 0 $grid-gutter-width;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-shadow: 0px 1px 1px rgba(0,0,0,0.3)
+    }
+    &:after{
+      content: '';
+      display: block;
+      width:0;
+      height:0;
+      border-left: 10px solid transparent;
+      border-bottom: 10px solid $pre-js;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &[rel=PHP]{
+    padding-top: $grid-gutter-width * 1.5;
+    &:before{
+      background-color: $pre-php;
+      color: white;
+      content: 'CSS';
+      display: block;
+      font-family: $font-default;
+      font-size: 1rem;
+      font-weight: 600;
+      position: absolute;
+      line-height: $grid-gutter-width;
+      padding: 0 $grid-gutter-width;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-shadow: 0px 1px 1px rgba(0,0,0,0.3)
+    }
+    &:after{
+      content: '';
+      display: block;
+      width:0;
+      height:0;
+      border-left: 10px solid transparent;
+      border-bottom: 10px solid $pre-php;
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
   }
 }

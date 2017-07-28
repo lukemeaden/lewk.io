@@ -2,6 +2,7 @@ import DataStore from 'flux/stores/DataStore.js'
 
 class s404 extends React.Component {
     render() {
+        document.title = `404 - Lewk.io`;
         let allData = DataStore.getAll();
         return (
             <div>

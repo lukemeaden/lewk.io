@@ -5,6 +5,7 @@ import Home                 from 'components/Home.js';
 import Blog                 from 'components/Blog.js';
 import Page                 from 'components/Page.js';
 import Post                 from 'components/Post.js';
+import Search               from 'components/Search.js';
 import s404                 from 'components/s404.js';
 import Header               from 'components/partials/Header.js';
 import Footer               from 'components/partials/Footer.js';
@@ -16,6 +17,8 @@ import {
     Switch
 } from 'react-router-dom';
 
+require('../scss/font-awesome.scss');
+
 
 class AppInitializer {
 
@@ -23,7 +26,8 @@ class AppInitializer {
         'blog': Blog,
         'home': Home,
         'page': Page,
-        'post': Post
+        'post': Post,
+        'search': Search
     }
 
     buildRoutes(data){
@@ -52,6 +56,17 @@ class AppInitializer {
         })
     }
 
+    buildSearchRoutes(data){
+        return(
+            <Route
+                key="search"
+                component={Search}
+                path="/search/*"
+                exact
+            />
+        )
+    }
+
     run() {
         DataActions.getPages((response)=>{
             render(
@@ -62,6 +77,7 @@ class AppInitializer {
                             <Route path="/" component={Home} exact />
                             {this.buildRoutes(response)}
                             {this.buildBlogRoutes(response)}
+                            {this.buildSearchRoutes(response)}
                             <Route path='*' component={s404} />
                             <Route render={() => { return <Redirect to="/" /> }} />
                         </Switch>

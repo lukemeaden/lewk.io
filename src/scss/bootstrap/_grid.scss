@@ -2,6 +2,21 @@
 // Grid system
 // --------------------------------------------------
 
+html{
+  height: 100%;
+  box-sizing: border-box;
+  *,
+  &:before,
+  &:after{
+    box-sizing: inherit;
+  }
+  body{
+    background-color: $colour-grey-lightist;
+    position: relative;
+    min-height: 100%;
+  }
+}
+
 
 // Container widths
 //

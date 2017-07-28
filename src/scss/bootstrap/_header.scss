@@ -1,19 +1,36 @@
 .header{
-  background: #ffffff;
+  background: $colour-alt;
   z-index: 1500;
   &.header-fixed{
     position: fixed;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-    & + section{
-      padding-top: $grid-gutter-width * 1.5;
+    top: 0;
+    & + section,
+    & + div{
+      padding-top: $grid-gutter-width;
     }
   }
 
   .brand{
+    color: #ffffff;
     display: inline-block;
     padding: $grid-gutter-width / 2 $grid-gutter-width;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+  .nav{
+    li{
+      &:hover{
+        background-color: $colour-alt-dark
+      }
+      a{
+        color: #ffffff;
+      }
+    }
   }
 
 }

@@ -15,6 +15,7 @@ $colour-grey-light: lighten( $colour-black, 57% );
 $colour-grey: lighten( $colour-black, 50% );
 $colour-alt: #0aafe6;
 $colour-alt-bright: #20cde8;
+$colour-alt-dark: #0E98D6;
 
 $colour-red: #ed3e44;
 $colour-red-dark: desaturate($colour-red, 35%);
@@ -23,6 +24,15 @@ $colour-green-dark: desaturate($colour-green, 30%);
 $colour-orange: #f3942c;
 $colour-orange-dark: desaturate($colour-orange, 22%);
 
+$colour-purple-blue: #90AEED;
+$colour-purple: #9E90ED;
+$colour-purple-pink: #C490ED;
+$colour-pink: #E790ED;
+
+$pre-html: $colour-purple-blue;
+$pre-css: $colour-purple;
+$pre-js: $colour-purple-pink;
+$pre-php: $colour-pink;
 
 
 
@@ -109,3 +119,8 @@ $container-md:                 $container-desktop !default;
 $container-large-desktop:      (1140px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
+
+
+
+// Box Shadow for cards/main
+$box-shadow:                   0px 1px 3px rgba(0, 0, 0, 0.05)

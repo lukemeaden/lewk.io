@@ -67,12 +67,18 @@ module.exports = {
               path.resolve(__dirname, './src/scss')
           ],
 					loaders: ["css-loader","sass-loader"]
-      }
+      },
+			{
+					test: /\.html$/,
+					loader: 'html-loader',
+			}
+
 		]
 	},
 	plugins: [
     new SassPlugin("src/scss/site.scss"),
     new SassPlugin("src/scss/font-awesome.scss"),
+    new SassPlugin("src/scss/docs.scss"),
 		new webpack.HotModuleReplacementPlugin(), // Hot reloading
 		new webpack.NoEmitOnErrorsPlugin(), // Webpack will let you know if there are any errors
 

@@ -29,7 +29,6 @@ class DataActions {
             const medias    = response;
             const payload   = { pages, posts, medias }
             this.getSuccess(payload); // Pass returned data to the store
-            console.log(payload)
             cb(payload); // This callback will be used for dynamic rout building
         });
         return true;

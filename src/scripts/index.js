@@ -6,6 +6,7 @@ import Blog                 from 'components/Blog.js';
 import Page                 from 'components/Page.js';
 import Post                 from 'components/Post.js';
 import Search               from 'components/Search.js';
+import StyleGuide           from 'components/StyleGuide.js';
 import s404                 from 'components/s404.js';
 import Header               from 'components/partials/Header.js';
 import Footer               from 'components/partials/Footer.js';
@@ -27,7 +28,8 @@ class AppInitializer {
         'home': Home,
         'page': Page,
         'post': Post,
-        'search': Search
+        'search': Search,
+        'style-guide': StyleGuide
     }
 
     buildRoutes(data){
@@ -78,6 +80,7 @@ class AppInitializer {
                             {this.buildRoutes(response)}
                             {this.buildBlogRoutes(response)}
                             {this.buildSearchRoutes(response)}
+                            <Route path='/style-guide' component={StyleGuide} />
                             <Route path='*' component={s404} />
                             <Route render={() => { return <Redirect to="/" /> }} />
                         </Switch>

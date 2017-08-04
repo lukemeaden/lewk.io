@@ -1,4 +1,4 @@
-import alt          from 'flux/alt/alt.js';
+import alt          from 'flux/alt/Alt.js';
 import DataActions  from 'flux/actions/DataActions.js';
 
 class DataStore {
